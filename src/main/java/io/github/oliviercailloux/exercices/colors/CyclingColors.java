@@ -22,6 +22,8 @@ public class CyclingColors implements Iterable<String> {
 
 	/**
 	 * Builds an instance that contains at most three colors.
+	 *
+	 * @throws NullPointerException if some of the given colors are {@code null}
 	 */
 	public CyclingColors(String color1, String color2, String color3) {
 		/* TODO */
