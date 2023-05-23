@@ -14,6 +14,8 @@ import java.util.Set;
  * "Green", an iterator might return "Red", "Blue", "Green", "Red", "Blue", and
  * so on indefinitely; or "Blue", "Red", "Green", "Blue", "Red", "Green", …
  * <p>
+ * An instance does not contain duplicate colors.
+ * <p>
  * An instance of this class should equal another one iff they contain the same
  * colors. (Do not forget that if you override {@link #equals(Object)}, you also
  * have to override another method.)
@@ -30,6 +32,8 @@ public class CyclingColors implements Iterable<String> {
 	}
 
 	/**
+	 * Returns an iterator cycling over the colors contained in this instance.
+	 *
 	 * @return an iterator that always has a next element.
 	 */
 	public Iterator<String> iterator() {
@@ -54,29 +58,72 @@ public class CyclingColors implements Iterable<String> {
 		return null;
 	}
 
+	/**
+	 * Adds the given colors, so that future iterations (not ongoing ones) will
+	 * consider them.
+	 * <p>
+	 * The colors in the given collection that are already in this object are
+	 * <em>not</em> added again.
+	 *
+	 * @param colors the colors to add.
+	 */
 	public void addColors(Collection<String> colors) {
 		/* TODO */
 	}
 
-	public void removeColor(String color) {
-		/* TODO */
-	}
-
+	/**
+	 * Returns the number of colors in this object.
+	 *
+	 * @return a non-negative integer.
+	 */
 	public int size() {
 		/* TODO */
 		return -10;
 	}
 
+	/**
+	 * Returns a fixed collection of the colors contained in this instance at the
+	 * time of the call, thus, one that is not modified when this instance is
+	 * modified, and that contains the first color (in the iteration order) twice.
+	 * The returned collection iteration does <em>not</em> cycle.
+	 * <p>
+	 * For example, if this instance contains the colors "Green" and "Blue", this
+	 * method returns a collection that when iterated returns "Green", "Green" and
+	 * "Blue".
+	 *
+	 * @return these colors with the first one duplicated, in a non-cyclic
+	 *         collection
+	 */
 	public Collection<String> withDuplicatedFirstColor() {
 		/* TODO */
 		return null;
 	}
 
+	/**
+	 * Returns a set view of the colors contained in this object. The returned set
+	 * is a dynamic view of the colors contained in this object, thus, it is
+	 * modified when the colors in this object change.
+	 * <p>
+	 * For example, calling this method to obtain a set <code>s</code> then adding a
+	 * color to this instance modifies <code>s</code> as well.
+	 *
+	 * @return a view of the colors in this object.
+	 */
 	public Set<String> asSetOfColors() {
 		/* TODO */
 		return null;
 	}
 
+	/**
+	 * Returns a fixed set of the colors contained in this instance at the time of
+	 * the call, thus, one that is not modified when this instance is modified. The
+	 * returned set iteration does <em>not</em> cycle.
+	 * <p>
+	 * For example, if this instance contains the colors "Green" and "Blue", this
+	 * method returns a set that when iterated returns "Green" and "Blue".
+	 *
+	 * @return these colors in a (non-cyclic) set
+	 */
 	public Set<String> snapshot() {
 		/* TODO */
 		return null;
