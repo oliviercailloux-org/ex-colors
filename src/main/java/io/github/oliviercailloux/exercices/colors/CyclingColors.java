@@ -74,7 +74,7 @@ public class CyclingColors implements Iterable<String> {
 	/**
 	 * Returns the number of colors in this object.
 	 *
-	 * @return a non-negative integer.
+	 * @return a positive integer.
 	 */
 	public int size() {
 		/* TODO */
