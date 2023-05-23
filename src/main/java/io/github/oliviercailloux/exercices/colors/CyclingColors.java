@@ -58,7 +58,7 @@ public class CyclingColors implements Iterable<String> {
 		/* TODO */
 	}
 
-	public void removeColor() {
+	public void removeColor(String color) {
 		/* TODO */
 	}
 
