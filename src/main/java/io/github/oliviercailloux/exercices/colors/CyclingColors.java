@@ -8,7 +8,7 @@ import java.util.Set;
  * A modifiable set of colors over which it is possible to iterate infinitely,
  * cycling through the available colors. The order of iteration among the colors
  * contained in this object is unspecified during the first cycle, but further
- * cycles should keep iterating in the same order.
+ * cycles keep iterating in the same order.
  * <p>
  * For example, if an instance contains the three colors "Red", "Blue" and
  * "Green", an iterator might return "Red", "Blue", "Green", "Red", "Blue", and
@@ -16,9 +16,9 @@ import java.util.Set;
  * <p>
  * An instance does not contain duplicate colors.
  * <p>
- * An instance of this class should equal another one iff they contain the same
- * colors. (Do not forget that if you override {@link #equals(Object)}, you also
- * have to override another method.)
+ * An instance of this class equals another one iff they contain the same
+ * colors, irrespective of their iteration order. (Do not forget that if you
+ * override {@link #equals(Object)}, you also have to override another method.)
  */
 public class CyclingColors implements Iterable<String> {
 
